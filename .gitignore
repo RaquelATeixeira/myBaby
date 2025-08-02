@@ -1,0 +1,2 @@
+node_modules/
+style.css     # se preferir compilar só no deploy
