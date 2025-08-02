@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>A Song For You</title>
+
+  <!-- CSS embutido -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    :root{
+      --neon-pink:#ff2bff;
+      --light-pink:#ffb6d5;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+    body.centered{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+      background:#000;
+      color:var(--light-pink);
+      text-align:center;
+      padding:2rem;
+    }
+
+    h1.neon{
+      color:var(--neon-pink);
+      font-size:2rem;
+      line-height:1.4;
+      text-shadow:0 0 8px var(--neon-pink),
+                  0 0 16px var(--neon-pink),
+                  0 0 24px var(--neon-pink);
+      margin-bottom:2rem;
+      max-width:90vw;
+    }
+
+    /* player responsivo */
+    .player-wrapper{
+      width:100%;
+      max-width:600px;
+      aspect-ratio:16/9;
+    }
+    .player-wrapper iframe{
+      width:100%;
+      height:100%;
+      border-radius:12px;
+      border:none;
+    }
+    .spotify-link{
+    display:inline-flex;
+    align-items:center;
+    gap:.6rem;
+    margin-top:2rem;
+
+    padding:.8rem 1.6rem;
+    font-size:1.1rem;
+    font-weight:600;
+
+    color:#ff2bff;                       /* rosa-neon do site */
+    border:2px solid currentColor;
+    border-radius:50px;
+    text-decoration:none;
+
+    transition:background .3s,color .3s,transform .2s;
+  }
+  .spotify-link svg{
+    flex-shrink:0;
+  }
+  .spotify-link:hover{
+    background:#ff2bff;                  /* fundo rosa-neon */
+    color:#000;                          /* texto/ícone ficam pretos */
+    transform:translateY(-2px);
+  }
+  </style>
+</head>
+
+<body class="centered">
+  <h1 class="neon">
+    Words can't be enough to demonstrate my love,<br>
+    so here’s a song
+  </h1>
+
+  <div class="player-wrapper">
+    <!-- YouTube embed • ID: vx4kLgnFexo (vídeo oficial) -->
+   <a class="spotify-link" href="https://open.spotify.com/intl-pt/track/0n0XAmYCMWlzj3W9VdMejw?si=9ad023e45ff34352"
+   target="_blank" rel="noopener">
+  <!-- ícone (SVG) -->
+  <svg aria-hidden="true" viewBox="0 0 168 168" width="24" height="24">
+    <path fill="#1ED760"
+          d="M84 0a84 84 0 100 168 84 84 0 000-168zm38.6 120.7a6 6 0 01-8.2 2 97.6 97.6 0 00-53.3-15.6 95.6 95.6 0 00-23 2.8 6 6 0 01-3.4-11.4 107.7 107.7 0 0126-3.3 109.6 109.6 0 0160.1 17.6 6 6 0 012 8.2zm11.7-19.2a7.4 7.4 0 01-10.2 2.5 115.3 115.3 0 00-63-18.4 113 113 0 00-27.1 3.3 7.4 7.4 0 01-3.8-14.3 128.4 128.4 0 0130.7-3.7 129.8 129.8 0 0171.1 20.8 7.4 7.4 0 012.3 10.2zM132 81a9 9 0 01-12.2 3 133 133 0 00-73-21.3 130.8 130.8 0 00-31.3 3.8 9 9 0 01-4.5-17.3 148.4 148.4 0 0135.6-4.3 149.9 149.9 0 0182.2 24 9 9 0 013 12.1z"/>
+  </svg>
+</a>
+</div>
+
+</body>
+</html>

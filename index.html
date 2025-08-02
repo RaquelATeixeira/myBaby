@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Everlasting Flowers</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    :root {
+      --neon-pink: #ff2bff;
+      --light-pink: #ffb6d5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body.centered {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      background: #000;
+      color: var(--light-pink);
+      text-align: center;
+    }
+
+    h1.neon {
+      color: var(--neon-pink);
+      font-size: 2rem;
+      line-height: 1.4;
+      text-shadow:
+        0 0 8px var(--neon-pink),
+        0 0 16px var(--neon-pink),
+        0 0 24px var(--neon-pink);
+      margin-bottom: 2rem;
+    }
+
+    a.btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      color: var(--neon-pink);
+      border: 2px solid var(--neon-pink);
+      border-radius: 12px;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    a.btn:hover {
+      background: var(--neon-pink);
+      color: #000;
+    }
+  </style>
+</head>
+<body class="centered">
+  <h1 class="neon">I was missing you so much baby,<br/>
+  and for that I want to give you flowers that will never die or fade or lose color,<br/>
+  do you want that?</h1>
+  <a class="btn" href="flowers.html">Yes, I want to see 💖</a>
+</body>
+</html>

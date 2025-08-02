@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Heart For You</title>
+
+  <!-- CSS embutido -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    :root{
+      --neon-pink:#ff2bff;
+      --light-pink:#ffb6d5;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+    body.centered{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+      background:#000;
+      color:var(--light-pink);
+      text-align:center;
+      overflow:hidden;
+    }
+
+    h1.neon{
+      color:var(--neon-pink);
+      font-size:2rem;
+      line-height:1.4;
+      text-shadow:0 0 8px var(--neon-pink),
+                  0 0 16px var(--neon-pink),
+                  0 0 24px var(--neon-pink);
+      margin-bottom:2rem;
+      max-width:90vw;
+    }
+
+    /* coração */
+    .heart{
+      font-size:8rem;
+      line-height:1;
+      animation:beat 1s infinite;
+      filter:drop-shadow(0 0 20px red);
+    }
+    @keyframes beat{
+      0%,100%{transform:scale(1);}
+      50%   {transform:scale(1.25);}
+    }
+
+    /* seta para próxima página */
+    .btn.corner{
+      position:fixed;
+      right:2rem;
+      bottom:2rem;
+      font-size:3rem;
+      color:var(--neon-pink);
+      background:transparent;
+      border:none;
+      text-decoration:none;
+      line-height:1;
+      transition:transform .2s;
+    }
+    .btn.corner:hover{transform:translateX(6px);}
+  </style>
+
+  <!-- script: acelera o batimento aos poucos -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const heart = document.querySelector('.heart');
+      let dur = 1;               // duração inicial (1 s)
+      setInterval(() => {
+        dur = Math.max(0.25, dur - 0.15);   // mantém >= 0 ,25 s
+        heart.style.animationDuration = dur + 's';
+      }, 2000);
+    });
+  </script>
+</head>
+
+<body class="centered">
+  <h1 class="neon">
+    Flowers can't be enough to say how much I love you,<br>
+    this is my heart beating for you
+  </h1>
+
+  <div class="heart">❤️</div>
+
+  <a class="btn corner" href="song.html">➜</a>
+</body>
+</html>
